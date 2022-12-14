@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="Mix" 
+                Content="Наоборот" 
+                HorizontalAlignment="Left" 
+                Margin="430,75,0,0" 
+                VerticalAlignment="Top" 
+                Background="#FFA72424" 
+                Height="30" 
+                Width="174" 
+                Click="Mix_Click"/>
+        <TextBox x:Name="txtName"
+                 HorizontalAlignment="Center" 
+                 Margin="0,10,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="408" Height="60" 
+                 Background="WhiteSmoke">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="Separately" 
+                Content="Разделить" 
+                HorizontalAlignment="Left" 
+                Margin="196,75,0,0" 
+                VerticalAlignment="Top" 
+                Background="#FFA72424" 
+                Height="30" Width="174" Click="Separately_Click"/>
+        <ListBox x:Name="Listtxt"
+                 d:ItemsSource="{d:SampleData ItemCount=5}" 
+                 BorderBrush="Black"
+                 BorderThickness="01"
+                 Margin="22,113,430,26"/>
+        <Label x:Name="Labeltxt"
+               HorizontalAlignment="Left" 
+               Margin="430,113,0,0" 
+               VerticalAlignment="Top" 
+               Height="295" Width="348" 
+               Foreground="Black" 
+               BorderBrush="Black"
+               BorderThickness="01"
+               Background="#00000000"/>
+    </Grid>
+</Window>
